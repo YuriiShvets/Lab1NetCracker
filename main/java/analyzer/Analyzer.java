@@ -27,6 +27,8 @@ public class Analyzer {
 
         LinkedList<Double> times = new LinkedList<>();
 
+        times.add((double)arrSize);
+
         int[] arr;
         for(Sort sort: sorts) {
             arr = fill(arrSize, filler);

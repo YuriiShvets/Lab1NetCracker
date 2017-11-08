@@ -84,7 +84,7 @@ public class ReflectionWorker {
     public LinkedList<String> getSortsNames() {
         LinkedList<String> names = new LinkedList<>();
         for(Sort sort: sorts) {
-            names.add(sort.toString());
+            names.add(sort.getClass().getSimpleName());
         }
         return names;
     }
