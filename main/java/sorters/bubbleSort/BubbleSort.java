@@ -12,6 +12,7 @@ public abstract class BubbleSort extends Sort {
     /**
      *
      * @param arr input array of integers
+     * @since 1.0
      */
     @Override
     public final void sort(int[] arr) {
@@ -36,6 +37,7 @@ public abstract class BubbleSort extends Sort {
      * @param arrSize size of array
      * @param j
      * @return directed j
+     * @since 1.0
      */
     abstract int checkDirect(int arrSize, int j);
 }

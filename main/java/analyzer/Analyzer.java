@@ -22,6 +22,7 @@ public class Analyzer {
      * @param filler filler used to fill arrays
      * @param sorts List of sort objects
      * @return list of times of algoritms works
+     * @since 1.0
      */
     public LinkedList<Double> testSorts(int arrSize, Method filler, LinkedList<Sort> sorts) {
 
@@ -45,6 +46,7 @@ public class Analyzer {
      * @param size of array
      * @param filler filler used to fill
      * @return filled array
+     * @since 1.0
      */
     private int[] fill(int size, Method filler) {
         int[] arr = new int[size];

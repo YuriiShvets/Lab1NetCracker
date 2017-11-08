@@ -18,6 +18,11 @@ public class ShellSortTest {
         sort.sort(arr);
 
         int[] checkArr = {1, 3, 8, 9, 15};
-        assert(Arrays.equals(arr, checkArr));
+        assertTrue(Arrays.equals(arr, checkArr));
+
+
+        arr = null;
+        sort.sort(arr);
+        assertTrue(arr == null);
     }
 }

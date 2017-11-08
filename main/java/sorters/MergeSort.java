@@ -9,25 +9,10 @@ import java.util.Arrays;
 
 public class MergeSort extends Sort {
 
-//    private static MergeSort instance;
-//
-//    private MergeSort() {
-//        super();
-//    }
-//
-//    /**
-//     *
-//     * @return instance of the class
-//     */
-//    public static MergeSort newInstance() {
-//        if(instance == null) {
-//            instance = new MergeSort();
-//        }
-//        return instance;
-//    }
     /**
      *
      * @param arr input array of integers
+     * @since 1.0
      */
     @Override
     public void sort(int[] arr) {

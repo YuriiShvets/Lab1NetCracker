@@ -20,14 +20,25 @@ public class BubbleSortTest {
         sort.sort(arr);
 
         int[] checkArr = {1, 3, 8, 9, 15};
-        assert(Arrays.equals(arr, checkArr));
+        assertTrue(Arrays.equals(arr, checkArr));
+
+
+        arr = null;
+        sort.sort(arr);
+        assertTrue(arr == null);
+
 
         sort = new ReversedBubbleSort();
 
         arr = new int[]{1, 15, 8, 3, 9};
         sort.sort(arr);
 
-        assert(Arrays.equals(arr, checkArr));
+        assertTrue(Arrays.equals(arr, checkArr));
+
+
+        arr = null;
+        sort.sort(arr);
+        assertTrue(arr == null);
     }
 
 }

@@ -11,9 +11,20 @@ import org.apache.poi.xssf.usermodel.charts.*;
 
 /**
  * Created by User on 08.11.2017.
+ * @author Shvets
+ * @version 1.0
+ *
+ * Create a excel with data
  */
 public class Excel {
 
+    /**
+     *
+     * @param fileName name of file than will be created
+     * @param sheets List of sheets
+     * @throws FileNotFoundException when fileName is wrong
+     * @throws IOException when some problem with file
+     */
     public Excel(String fileName, LinkedList<Sheet> sheets) throws FileNotFoundException, IOException {
         XSSFWorkbook workbook = new XSSFWorkbook();
 
@@ -45,10 +56,10 @@ public class Excel {
             ValueAxis leftAxis = lineChart.getChartAxisFactory().createValueAxis(AxisPosition.LEFT);
             leftAxis.setCrosses(AxisCrosses.AUTO_ZERO);
 
-            ChartDataSource<Number> xs = DataSources.fromNumericCellRange(worksheet, new CellRangeAddress(1, sheet.getRows().size() + 1, 0, 0));
+            ChartDataSource<Number> xs = DataSources.fromNumericCellRange(worksheet, new CellRangeAddress(0, sheet.getRows().size(), 0, 0));
 
             for (int colIndex = 1; colIndex < sheet.getRows().get(0).size(); colIndex++) {
-                ChartDataSource<Number> ys = DataSources.fromNumericCellRange(worksheet, new CellRangeAddress(1, sheet.getRows().size() + 1, colIndex, colIndex));
+                ChartDataSource<Number> ys = DataSources.fromNumericCellRange(worksheet, new CellRangeAddress(0, sheet.getRows().size(), colIndex, colIndex));
                 data.addSeries(xs, ys);
             }
 

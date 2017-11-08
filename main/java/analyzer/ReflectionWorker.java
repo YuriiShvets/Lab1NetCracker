@@ -44,6 +44,11 @@ public class ReflectionWorker {
         fillers = findFillers();
     }
 
+    /**
+     *
+     * @return List of methods
+     * @since 1.0
+     */
     private LinkedList<Method> findFillers() {
         Fillers fillers = new Fillers();
         Class<?> c = fillers.getClass();
@@ -57,6 +62,11 @@ public class ReflectionWorker {
         return fillersList;
     }
 
+    /**
+     *
+     * @return List of names of all Sorts
+     * @since 1.0
+     */
     private LinkedList<Class<?>> findSorts() {
         Reflections reflections = new Reflections(Sort.class.getPackage().getName(), new SubTypesScanner());
         LinkedList<Class<?>> subTypes = new LinkedList<Class<?>>();
@@ -73,14 +83,29 @@ public class ReflectionWorker {
         return subTypes;
     }
 
+    /**
+     *
+     * @return list of Sorts objects
+     * @since 1.0
+     */
     public LinkedList<Sort> getSorts() {
         return sorts;
     }
 
+    /**
+     *
+     * @return list of Fillers methods
+     * @since 1.0
+     */
     public LinkedList<Method> getFillers() {
         return fillers;
     }
 
+    /**
+     *
+     * @return list of names of sorts
+     * @since 1.0
+     */
     public LinkedList<String> getSortsNames() {
         LinkedList<String> names = new LinkedList<>();
         for(Sort sort: sorts) {

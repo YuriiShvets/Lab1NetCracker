@@ -7,28 +7,12 @@ package sorters.bubbleSort;
  */
 public class ReversedBubbleSort extends BubbleSort {
 
-//    private static ReversedBubbleSort instance;
-//
-//    private ReversedBubbleSort() {
-//        super();
-//    }
-//
-//    /**
-//     *
-//     * @return instance of the class
-//     */
-//    public static ReversedBubbleSort newInstance() {
-//        if(instance == null) {
-//            instance = new ReversedBubbleSort();
-//        }
-//        return instance;
-//    }
-
     /**
      *
      * @param arrSize size of array
      * @param j
      * @return directed j
+     * @since 1.0
      */
     @Override
     int checkDirect(int arrSize, int j) {

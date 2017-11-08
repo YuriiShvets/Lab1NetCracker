@@ -25,10 +25,14 @@ public class Fillers {
             throw new IllegalArgumentException();
         }
         int[] arr = new int[size];
+        if(size == 0) {
+            return arr;
+        }
         arr[0] = random.nextInt(bound);
         for(int i = 1; i < size; i++) {
             arr[i] = arr[i - 1] + random.nextInt(bound);
         }
+
         return arr;
     }
 
@@ -45,6 +49,9 @@ public class Fillers {
             throw new IllegalArgumentException();
         }
         int[] arr = getSortedArr(size);
+        if(size == 0) {
+            return arr;
+        }
         arr[size - 1] = random.nextInt(bound);
         return arr;
     }

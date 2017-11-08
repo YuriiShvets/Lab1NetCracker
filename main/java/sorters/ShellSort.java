@@ -7,23 +7,9 @@ package sorters;
  */
 public class ShellSort extends Sort {
 
-//    private static ShellSort instance;
-//
-//    private ShellSort() {
-//        super();
-//    }
-//
-//    /**
-//     * @return instance of the class
-//     */
-//    public static ShellSort newInstance() {
-//        if(instance == null) {
-//            instance = new ShellSort();
-//        }
-//        return instance;
-//    }
     /**
      * @param arr input array of integers
+     * @since 1.0
      */
     @Override
     public void sort(int []arr) {

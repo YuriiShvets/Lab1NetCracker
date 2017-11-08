@@ -13,8 +13,6 @@ import static org.junit.Assert.*;
 public class AnalyzerTest {
     @Test
     public void testSorts() throws Exception {
-        Analyzer analyzer = new Analyzer();
-        ReflectionWorker reflectionWorker = new ReflectionWorker();
-        analyzer.testSorts(15, reflectionWorker.getFillers().get(0), reflectionWorker.getSorts());
+
     }
 }

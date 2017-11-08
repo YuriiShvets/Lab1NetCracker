@@ -11,6 +11,7 @@ public class LibrarySort extends Sort {
     /**
      *
      * @param arr input array of integers
+     * @since 1.0
      */
     @Override
     public void sort(int[] arr) {

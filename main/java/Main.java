@@ -19,7 +19,7 @@ public class Main {
         LinkedList<Sheet> sheets = new LinkedList<>();
         for(Method fill: reflectionWorker.getFillers()) {
             LinkedList<LinkedList<Double>> rows = new LinkedList<>();
-            for(int i = 1000; i < 100000; i += 1000) {
+            for(int i = 2; i < 100000; i *= 2) {
                 rows.add(analyser.testSorts(i, fill, reflectionWorker.getSorts()));
             }
             sheets.add(new Sheet(fill.getName().split("get")[1], reflectionWorker.getSortsNames(), rows));
@@ -32,13 +32,5 @@ public class Main {
         }catch (IOException e) {
             e.printStackTrace();
         }
-//        System.out.println(reflectionWorker.getSortsNames());
-//
-//        for(Method fill: reflectionWorker.getFillers()) {
-//            System.out.println(fill.getName().split("get")[1]);
-//            for(int i = 1000; i < 100000; i += 1000) {
-//                System.out.println(analyser.testSorts(i, fill, reflectionWorker.getSorts()));
-//            }
-//        }
     }
 }
