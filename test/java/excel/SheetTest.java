@@ -25,34 +25,34 @@ public class SheetTest {
         data.add(new LinkedList<>());
         data.add(new LinkedList<>());
 
-        data.get(1).add(4d);
-        data.get(1).add(5d);
-        data.get(1).add(6d);
+        data.get(0).add(4d);
+        data.get(0).add(5d);
+        data.get(0).add(6d);
 
-        data.get(2).add(7d);
-        data.get(2).add(8d);
-        data.get(2).add(9d);
+        data.get(1).add(7d);
+        data.get(1).add(8d);
+        data.get(1).add(9d);
 
-        data.get(3).add(10d);
-        data.get(3).add(11d);
-        data.get(3).add(12d);
+        data.get(2).add(10d);
+        data.get(2).add(11d);
+        data.get(2).add(12d);
 
         sheet = new Sheet(name, columns, data);
     }
 
     @Test
     public void getName() throws Exception {
-        assertTrue(sheet.equals(name));
+        assertTrue(sheet.getName().equals(name));
     }
 
     @Test
     public void getColumnNames() throws Exception {
-        
+        assertTrue(sheet.getColumnNames().equals(columns));
     }
 
     @Test
     public void getRows() throws Exception {
-
+        assertTrue(sheet.getRows().equals(data));
     }
 
 }
